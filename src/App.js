@@ -12,8 +12,10 @@ import InfoBox from "./InfoBox";
 import Map from "./Map";
 import Table from "./Table";
 import { sortData } from "./util";
+import LineGraph from "./LineGraph";
 // https://disease.sh/v3/covid-19/countries
 // https://disease.sh/v3/covid-19/all
+// https://disease.sh/v3/covid-19/historical/all?lastdays=120
 // https://disease.sh/v3/covid-19/countries/[COUNTRY_CODE]
 function App() {
   const [countries, setCountries] = useState([]);
@@ -106,7 +108,7 @@ function App() {
           <h3>Live Cases by country</h3>
           <Table countries={tableData} />
           <h3>Worldwide new cases</h3>
-          {/* Graph */}
+          <LineGraph />
         </CardContent>
       </Card>
     </div>
