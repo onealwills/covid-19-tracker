@@ -95,6 +95,7 @@ function App() {
         </div>
         <div className="app__stats">
           <InfoBox
+            isRed
             onClick={(e) => setCasesType("cases")}
             title="Coronavirus cases"
             active={casesType === "cases"}
@@ -109,6 +110,7 @@ function App() {
             total={numeral(countryInfo.recovered).format("0.0a")}
           />
           <InfoBox
+            isRed
             onClick={(e) => setCasesType("deaths")}
             title="Deaths"
             active={casesType === "deaths"}
